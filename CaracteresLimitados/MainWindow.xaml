@@ -8,8 +8,7 @@
         Title="Caja de texto con límite (140)" 
         Icon="img2/64.ico"
         d:DesignWidth="350" d:DesignHeight="180" 
-        MaxWidth="350" MaxHeight="180"
-        MinWidth="185" MinHeight="100">
+        MaxWidth="350" MaxHeight="180">
     <Grid>
         <TextBox
             x:Name="cajaDeTextoLimitado"
