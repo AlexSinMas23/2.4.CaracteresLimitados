@@ -25,9 +25,24 @@ namespace CaracteresLimitados
             InitializeComponent();
         }
 
-        private void cajaDeTextoLimitado_TextInput(object sender, TextCompositionEventArgs e)
+        private void cajaDeTextoLimitado_TextChanged(object sender, TextChangedEventArgs e)
         {
             this.contador.Text = this.cajaDeTextoLimitado.Text.Length.ToString();
+            if (this.contador.Text == "140")
+            {
+                this.contador.Foreground = Brushes.Red;
+                this.contador.FontSize = 14;
+            }
+            else if(this.contador.Text != "140" && this.contador.Foreground == Brushes.Red)
+            {
+                this.contador.Foreground = Brushes.Black;
+                this.contador.FontSize = 12;
+            }
+        }
+
+        private void enterBoton_Click(object sender, RoutedEventArgs e)
+        {
+            this.cajaDeTextoLimitado.Text = "";
         }
     }
 }

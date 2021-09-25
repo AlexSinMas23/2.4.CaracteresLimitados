@@ -5,18 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CaracteresLimitados"
         mc:Ignorable="d"
-        Title="MainWindow" Height="141.504" Width="320.117">
+        Title="Caja de texto con límite (140)" 
+        Icon="img2/64.ico"
+        d:DesignWidth="350" d:DesignHeight="180" 
+        MaxWidth="350" MaxHeight="180">
     <Grid>
         <TextBox
             x:Name="cajaDeTextoLimitado"
-            Height="100" Width="300"
             MaxLength="140"
-            ContentElement.TextInput="cajaDeTextoLimitado_TextInput"/>
+            TextWrapping="Wrap"
+            FontSize="18" 
+            
+            TextChanged="cajaDeTextoLimitado_TextChanged"/>
+        
         <TextBlock
-            x:Name="contador" Margin="285,94,6,5"
+            x:Name="contador"
             Text="0"
-            FontSize="7"
-            Opacity="1"/>
+            FontSize="12" 
+            Opacity="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5"/>
+        
+        <Button 
+            x:Name="enterBoton"
+            Width="1" 
+            Height="1" 
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Right"
+            IsDefault="True"
 
+            Click="enterBoton_Click"/>
     </Grid>
 </Window>
