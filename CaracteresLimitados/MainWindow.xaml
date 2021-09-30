@@ -16,7 +16,7 @@
             MaxLength="140"
             TextWrapping="Wrap"
             FontSize="18" 
-            
+            AcceptsReturn="true"
             TextChanged="cajaDeTextoLimitado_TextChanged"/>
         
         <TextBlock
@@ -32,7 +32,6 @@
             VerticalAlignment="Bottom" 
             HorizontalAlignment="Right"
             IsDefault="True"
-
             Click="enterBoton_Click"/>
     </Grid>
 </Window>
